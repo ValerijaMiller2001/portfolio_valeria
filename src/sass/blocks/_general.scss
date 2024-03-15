@@ -1,0 +1,65 @@
+.promo {
+    height: 100vh;
+    background: center center / cover no-repeat;
+    &_nav {
+        width: 100vw;
+        height: 100px;
+        background-color: $color-black-opacity;
+        &_block {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &_logo {
+            height: 100px;
+
+        }
+        &_link {
+            a {
+                color: $color-white;
+                font-size: 25px;
+                font-weight: 500;
+                margin-right: 70px;
+                text-decoration: none;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+    }
+    &_main {
+        &_title {
+            color: $color-white;
+            font-size: 64px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 80px;
+            line-height: 70px;
+        }
+        &_subtitle {
+            color: $color-white-opacity;
+            font-size: 35px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 80px;
+            line-height: 40px;
+        }
+        &_btn {
+            display: block;
+            margin: 0 auto;
+            width: 362px;
+            height: 67px;
+            border: 5px solid $color-white;
+            border-radius: 13px;
+            backdrop-filter: blur(4px);
+            background: none;
+
+            color: $color-white;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 47px;
+            text-align: center;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+    }
+}

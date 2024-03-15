@@ -35,9 +35,9 @@ nav {
 }
 
 .main {
-    min-height: 700px;
+    min-height: 100vh;
     padding: 40px 0 40px 0;
-/*     background-color: black; */
+
 }
 
 .main .main_text {
