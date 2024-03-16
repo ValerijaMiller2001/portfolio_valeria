@@ -1,32 +1,62 @@
+.menu {
+    &_block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        background-color: $color-black-opacity;
+    }
+    &_close {
+        img {
+            display: none;
+        }
+
+    }
+    &_logo {
+        height: 90px;
+        margin: 5px 0;
+    }
+    &_list {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        
+    }
+    &_link {
+        list-style-type: none;
+        a {
+            color: $color-white;
+            font-size: 25px;
+            font-weight: 500;
+            margin-right: 70px;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+    &_overlay {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-black-opacity;
+    }
+}
+
 .promo {
     height: 100vh;
     background: center center / cover no-repeat;
-    &_nav {
-        width: 100vw;
-        height: 100px;
-        background-color: $color-black-opacity;
-        &_block {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        &_logo {
-            height: 100px;
 
-        }
-        &_link {
-            a {
-                color: $color-white;
-                font-size: 25px;
-                font-weight: 500;
-                margin-right: 70px;
-                text-decoration: none;
-                text-transform: uppercase;
-                cursor: pointer;
-            }
+    &_hamburger {
+        display: none;
+        &_long {
+            display: none;
         }
     }
+
     &_main {
+        width: 1000px;
+        margin: 0 auto;
         &_title {
             color: $color-white;
             font-size: 64px;
@@ -37,7 +67,7 @@
         }
         &_subtitle {
             color: $color-white-opacity;
-            font-size: 35px;
+            font-size: 37px;
             font-weight: 300;
             text-align: center;
             margin-top: 80px;
@@ -46,20 +76,57 @@
         &_btn {
             display: block;
             margin: 0 auto;
-            width: 362px;
-            height: 67px;
+            width: 350px;
+            height: 65px;
             border: 5px solid $color-white;
-            border-radius: 13px;
+            border-radius: 15px;
             backdrop-filter: blur(4px);
             background: none;
 
             color: $color-white;
             font-size: 40px;
             font-weight: 500;
-            line-height: 47px;
+            line-height: 50px;
             text-align: center;
             margin-top: 100px;
+            padding-bottom: 5px;
             cursor: pointer;
         }
     }
 }
+
+.services {
+    background-color: $color-black;
+    padding: 50px 0;
+}
+
+.portfolio {
+    background-color: $color-black;
+    padding: 50px 0;
+    &_wrapper {
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        grid-auto-rows: 280px;
+        gap: 10px;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    &_item {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.price {
+    background-color: $color-black;
+    padding: 50px 0;
+}
+
+.contacts {
+    background-color: $color-black;
+    padding: 50px 0;
+}
+
