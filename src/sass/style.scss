@@ -1,6 +1,7 @@
 @import 'base/bootstrap-reboot.min';
 @import 'base/fonts';
 @import 'base/variables';
+@import 'base/mixin';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -11,7 +12,7 @@
 
 .container {
     position: relative;
-    width: 1200px;
+    width: 1140px;
     margin: 0 auto;
 }
 
