@@ -62,6 +62,25 @@
         }
     }
 
+    .price {
+        &_wrapper {
+            &-title {
+                font-size: 16px;
+            }
+            &-subtitle {
+                font-size: 15px;
+            }
+            &-descr {
+                font-size: 15px;
+            }
+        }
+        &_list {
+            &::before {
+                top: 3px;
+            }
+        }
+    }
+
     .contacts {
         &_wrapper {
             grid-template-columns: 255px 450px;
@@ -134,11 +153,12 @@
             z-index: 10;
         }
         &_overlay {
+            display: block;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #ffffff;
-            opacity: .75;
+            background-color: $color-black;
+            opacity: 0.7;
         }
 
         &_list {
@@ -182,8 +202,6 @@
             &_title {
                 font-size: 65px;
                 line-height: 57px;
-                margin-top: 0;
-                padding-top: 90px;
             }
             &_subtitle {
                 font-size: 36px;
@@ -196,6 +214,12 @@
         &_wrapper {
             grid-template: repeat(2, 265px) / repeat(2, 265px);
             grid-auto-rows: 265px;
+        }
+    }
+
+    .price {
+        &_wrapper {
+            display: block;
         }
     }
 
