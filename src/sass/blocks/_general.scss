@@ -8,10 +8,7 @@
         background-color: $color-black-opacity;
     }
     &_close {
-        img {
-            display: none;
-        }
-
+        display: none;
     }
     &_logo {
         height: 90px;
@@ -22,7 +19,6 @@
         justify-content: center;
         margin: 0;
         padding: 0;
-        
     }
     &_link {
         list-style-type: none;
@@ -47,7 +43,8 @@
 .promo {
     position: relative;
     height: 100vh;
-    background: center center / cover no-repeat;
+    background-color: $color-black;
+    // background: center center / cover no-repeat;
     &_arrow {
         display: block;
         position: absolute;
@@ -83,7 +80,7 @@
         width: 1000px;
         display: block;
         margin: 0 auto;
-        padding: 100px 0 20px 0;
+        padding: 110px 0 0;
         &_title {
             color: $color-white;
             font-size: 64px;
@@ -101,25 +98,6 @@
             line-height: 40px;
 
         }
-        // &_btn {
-        //     display: block;
-        //     margin: 0 auto;
-        //     width: 350px;
-        //     height: 65px;
-        //     border: 5px solid $color-white;
-        //     border-radius: 15px;
-        //     backdrop-filter: blur(4px);
-        //     background: none;
-
-        //     color: $color-white;
-        //     font-size: 40px;
-        //     font-weight: 500;
-        //     line-height: 50px;
-        //     text-align: center;
-        //     margin-top: 100px;
-        //     padding-bottom: 5px;
-        //     cursor: pointer;
-        // }
     }
 }
 
@@ -156,8 +134,8 @@
         margin-top: 30px;
     }
     &_item {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         border-radius: 15px;
         border: 3px solid $color-black-opacity;
         background-color: $color-white;
@@ -165,10 +143,7 @@
             display: block;
             margin: 0 auto;
             padding-top: 15px;
-            img {
-                height: 124px;
-
-            }
+            height: 139px;
 
         }
         &-title {
@@ -178,18 +153,6 @@
             text-align: center;
             margin-top: 20px;
             text-transform: uppercase;
-        }
-        &-subtitle {
-            display: block;
-            margin: 0 auto;
-            color: $color-purple;
-            font-size: 17px;
-            font-weight: 400;
-            text-align: center;
-            margin-top: 70px;
-            text-transform: uppercase;
-            text-decoration: none;
-            cursor: pointer;
         }
         &-btn {
             position: relative;
@@ -410,4 +373,3 @@
         }
     }
 }
-
