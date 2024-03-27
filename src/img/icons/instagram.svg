@@ -4,12 +4,12 @@
 	</desc>
 	<defs>
 		<clipPath id="clip6_14">
-			<rect id="instagram" width="32.000000" height="32.000000" transform="translate(-0.033813 -0.155396)" fill="white" fill-opacity="0"/>
+			<rect id="instagram" width="32.000000" height="32.000000" fill="white" fill-opacity="0"/>
 		</clipPath>
 	</defs>
 	<g clip-path="url(#clip6_14)">
-		<path id="path" d="M9.29 3.84C6.35 3.84 3.96 6.23 3.96 9.17L3.96 22.51C3.96 25.45 6.35 27.84 9.29 27.84L22.63 27.84C25.57 27.84 27.96 25.45 27.96 22.51L27.96 9.17C27.96 6.23 25.57 3.84 22.63 3.84L9.29 3.84Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-		<path id="path" d="M21.29 15.84C21.29 12.89 18.91 10.51 15.96 10.51C13.02 10.51 10.63 12.89 10.63 15.84C10.63 18.79 13.02 21.17 15.96 21.17C18.91 21.17 21.29 18.79 21.29 15.84Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-		<path id="path" d="M23.29 9.84C24.03 9.84 24.63 9.24 24.63 8.51C24.63 7.77 24.03 7.17 23.29 7.17C22.56 7.17 21.96 7.77 21.96 8.51C21.96 9.24 22.56 9.84 23.29 9.84Z" fill="#808080" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="path" d="M9.33 4C6.38 4 4 6.38 4 9.33L4 22.66C4 25.61 6.38 28 9.33 28L22.66 28C25.61 28 28 25.61 28 22.66L28 9.33C28 6.38 25.61 4 22.66 4L9.33 4Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round"/>
+		<path id="path" d="M21.33 16C21.33 13.05 18.94 10.66 16 10.66C13.05 10.66 10.66 13.05 10.66 16C10.66 18.94 13.05 21.33 16 21.33C18.94 21.33 21.33 18.94 21.33 16Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000" stroke-linejoin="round"/>
+		<path id="path" d="M23.33 10C24.06 10 24.66 9.4 24.66 8.66C24.66 7.93 24.06 7.33 23.33 7.33C22.59 7.33 22 7.93 22 8.66C22 9.4 22.59 10 23.33 10Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
 	</g>
 </svg>
