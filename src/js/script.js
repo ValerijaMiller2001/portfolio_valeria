@@ -32,9 +32,38 @@ closeElem.addEventListener('click', () => {
     document.body.classList.remove('_lock');
 });
 
-for (let i=0; i< items.length; i++){
+for (let i = 0; i < items.length; i++){
     items[i].addEventListener('click', () => {
         menu.classList.remove('active');
         document.body.classList.remove('_lock');
     });
 }
+
+const arrowUp = document.querySelector('.promo_up');
+window.addEventListener('scroll', (e) => {
+    let activeted = false;
+    if ( activeted === false) {
+        if (window.pageYOffset >= 1) {
+            menu.style.backgroundColor = 'black';
+            menu.style.transition = '0.9s';
+            hamburger.style.backgroundColor = 'black';
+            hamburger.style.transition = '0.9s';
+            activeted = true;
+        } else {
+            menu.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            menu.style.transition = '0.9s';
+            hamburger.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            hamburger.style.transition = '0.9s';
+            activeted = false;
+        }
+    } 
+    if (window.pageYOffset >= 800) {
+        arrowUp.style.display = 'block';
+        arrowUp.style.transition = '0.9s';
+    } else {
+        arrowUp.style.display = 'none';
+    }
+});
+
+
+

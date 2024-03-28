@@ -1,13 +1,14 @@
 .menu {
-    position: relative;
+    position: fixed;
     z-index: 2;
+    width: 100%;
+    background-color: $color-black-opacity;
     &_block {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 100px;
         width: 100%;
-        background-color: $color-black-opacity;
     }
     &_close {
         display: none;
@@ -25,13 +26,28 @@
     &_link {
         list-style-type: none;
         a {
+            position: relative;
             color: $color-white;
             font-size: 25px;
             font-weight: 500;
+            line-height: 1;
             margin-right: 70px;
             text-decoration: none;
             text-transform: uppercase;
             cursor: pointer;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $color-white;
+                transition: width 0.3s ease-out;
+            }
+            &:hover::after, &:focus::after {
+                width: 100%;
+            }
         }
     }
     &_overlay {
@@ -43,6 +59,7 @@
 }
 
 .promo {
+    position: relative;
     height: 100vh;
     background-color: $color-black;
     background: center center / cover no-repeat;
@@ -70,9 +87,10 @@
         }
     }
     &_hamburger {
+        position: relative;
         display: none;
         z-index: 5;
-        &_long {
+        &_block {
             display: none;
         }
     }
@@ -81,7 +99,7 @@
         width: 1000px;
         display: block;
         margin: 0 auto;
-        padding: 110px 0 0;
+        padding-top: 130px;
         &_title {
             color: $color-white;
             font-size: 64px;
@@ -97,6 +115,29 @@
             text-align: center;
             margin-top: 80px;
             line-height: 40px;
+        }
+    }
+    &_up {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 10px;
+
+        width: 36px;
+        height: 36px;
+
+        cursor: pointer;
+        div {
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                border-left: 6px dotted $color-purple;
+                border-top: 6px dotted $color-purple;
+                transform: rotate(45.00deg);
+            }
         }
     }
 }
@@ -124,7 +165,7 @@
 
 .services {
     background-color: $color-black;
-    padding: 50px 0;
+    padding: 100px 0 0;
     &_wrapper {
         display: grid;
         grid-template: repeat(2, 300px) / repeat(3, 300px);
@@ -193,7 +234,7 @@
 
 .portfolio {
     background-color: $color-black;
-    padding: 50px 0;
+    padding: 100px 0 0;
     &_wrapper {
         display: grid;
         grid-template: repeat(2, 280px) / repeat(4, 280px);
@@ -213,7 +254,7 @@
 
 .price {
     background-color: $color-black;
-    padding: 50px 0;
+    padding: 100px 0 0;
     &_wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -265,7 +306,7 @@
 
 .contacts {
     background-color: $color-black;
-    padding: 50px 0;
+    padding: 100px 0 60px;
     &_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
