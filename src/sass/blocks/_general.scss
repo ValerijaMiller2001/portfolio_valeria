@@ -118,7 +118,7 @@
         }
     }
     &_up {
-        display: block;
+        display: none;
         position: fixed;
         bottom: 0;
         right: 10px;
@@ -180,53 +180,106 @@
         border-radius: 15px;
         border: 3px solid $color-black-opacity;
         background-color: $color-white;
-        &-img {
+        &_main {
             display: block;
-            margin: 0 auto;
-            padding-top: 15px;
-            height: 139px;
-
-        }
-        &-title {
-            color: $color-black;
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            margin-top: 20px;
-            text-transform: uppercase;
-        }
-        &-btn {
-            position: relative;
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            height: 40px;
-            background-color: $color-purple;
-            border: none;
-            border-radius: 9px;
-            margin-top: 55px;
-            color: $color-white;
-            font-size: 15px;
-            text-align: left;
-            font-weight: 500;
-            text-transform: uppercase;
-            padding: 0 10px 0 10px;
-            transition: 0.5s all;
-            div {
-                &::before {
-                    content: '';
-                    width: 13px;
-                    height: 13px;
-                    border-right: 3px solid $color-white;
-                    border-bottom: 3px solid $color-white;
-                    position: absolute;
-                    right: 10px;
-                    top: 50%;
-                    transform: rotate(-45deg) translateY(-50%);
+            width: 100%;
+            height: 100%;
+            &-img {
+                display: block;
+                margin: 0 auto;
+                padding-top: 15px;
+                height: 139px;
+            }
+            &-title {
+                color: $color-black;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+                margin-top: 20px;
+                text-transform: uppercase;
+            }
+            &-btn {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+                width: 150px;
+                height: 40px;
+                background-color: $color-purple;
+                border: none;
+                border-radius: 9px;
+                margin-top: 55px;
+                color: $color-white;
+                font-size: 15px;
+                text-align: left;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding: 0 10px 0 10px;
+                transition: 0.7s all;
+                div {
+                    &::before {
+                        content: '';
+                        width: 13px;
+                        height: 13px;
+                        border-right: 3px solid $color-white;
+                        border-bottom: 3px solid $color-white;
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: rotate(-45deg) translateY(-50%);
+                    }
+                }
+                &:hover {
+                    background-color: $color-black;
                 }
             }
-            &:hover {
-                background-color: $color-black;
+        }
+        &_detail {
+            position: relative;
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            &-text {
+                color: $color-black;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: left;
+            }
+            &-btn {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                margin: 0 auto;
+                width: 150px;
+                height: 40px;
+                background-color: $color-purple;
+                border: none;
+                border-radius: 9px;
+                color: $color-white;
+                font-size: 15px;
+                text-align: right;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding: 0 15px 0 15px;
+                transition: 0.5s all;
+                div {
+                    &::before {
+                        content: '';
+                        width: 13px;
+                        height: 13px;
+                        border-left: 3px solid $color-white;
+                        border-bottom: 3px solid $color-white;
+                        position: absolute;
+                        left: 15px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+                &:hover {
+                    background-color: $color-black;
+                }
             }
         }
     }
