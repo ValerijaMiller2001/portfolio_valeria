@@ -1,3 +1,4 @@
+//Главный фон
 VANTA.NET({
     el: ".promo",
     mouseControls: true,
@@ -39,6 +40,7 @@ for (let i = 0; i < items.length; i++){
     });
 }
 
+//Меню становится черным при скролле
 const arrowUp = document.querySelector('.promo_up');
 window.addEventListener('scroll', (e) => {
     let activeted = false;
@@ -57,6 +59,7 @@ window.addEventListener('scroll', (e) => {
             activeted = false;
         }
     } 
+    //Стрелка вверх
     if (window.pageYOffset >= 800) {
         arrowUp.style.display = 'block';
         arrowUp.style.transition = '0.9s';
@@ -66,39 +69,31 @@ window.addEventListener('scroll', (e) => {
 });
 
 
+
+
+
+// Переключение услуг
 const mainBtn = document.querySelectorAll('.services_item_main-btn');
 const detailBtn = document.querySelectorAll('.services_item_detail-btn');
 const servicesMain = document.querySelectorAll('.services_item_main');
 const servicesDetail = document.querySelectorAll('.services_item_detail');
-// console.log(mainBtn);
-// console.log(detailBtn);
-// console.log(servicesMain);
-// console.log(servicesDetail);
-
-// mainBtn.forEach((item) => {
-//     item.addEventListener('click', (e) => {
-//         console.log('dsfsgs');
-//         for 
-//         servicesMain[].classList.remove('active');
-//     });
-// })
-
-
-//Переключение услуг
 for (i = 0; i < mainBtn.length; i++) {
     let main_win = servicesMain[i]
     let detail_win = servicesDetail[i]
     mainBtn[i].addEventListener('click', () => {
         main_win.classList.remove('active');
         main_win.style.display = 'none';
+        main_win.classList.add('fade');
         detail_win.classList.add('active');
         detail_win.style.display = 'block';
+
     })
 }
 for (i = 0; i < detailBtn.length; i++) {
     let main_win = servicesMain[i]
     let detail_win = servicesDetail[i]
     detailBtn[i].addEventListener('click', () => {
+        detail_win.classList.add('fade');
         detail_win.classList.remove('active');
         detail_win.style.display = 'none';
         main_win.classList.add('active');

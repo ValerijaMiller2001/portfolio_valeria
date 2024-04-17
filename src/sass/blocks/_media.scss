@@ -13,9 +13,13 @@
 
     .promo {
         &_main {
-            width: 850px;
+
             &_title {
                 font-size: 60px;
+                width: 850px;
+            }
+            &_subtitle {
+                width: 850px;
             }
         }
     }
@@ -49,9 +53,12 @@
     }
     .promo {
         &_main {
-            width: 700px;
             &_title {
                 font-size: 50px;
+                width: 700px;
+            }
+            &_subtitle {
+                width: 700px;
             }
         }
     }
@@ -224,14 +231,16 @@
         }
 
         &_main {
-            width: 540px;
+            padding-top: 50px;
             &_title {
                 font-size: 65px;
                 line-height: 57px;
+                width: 540px;
             }
             &_subtitle {
                 font-size: 36px;
                 line-height: 36px;
+                width: 540px;
             }
         }
     }
@@ -320,14 +329,16 @@
 
     .promo {
         &_main {
-            width: 100%;
             &_title {
                 font-size: 36px;
                 line-height: 38px;
+                width: 100%;
             }
             &_subtitle {
                 font-size: 20px;
                 line-height: 25px;
+                width: 100%;
+                margin-top: 60px;
             }
             &_btn {
                 width: 300px;

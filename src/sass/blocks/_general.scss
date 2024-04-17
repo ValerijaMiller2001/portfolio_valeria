@@ -96,10 +96,12 @@
     }
 
     &_main {
-        width: 1000px;
-        display: block;
-        margin: 0 auto;
-        padding-top: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 180px);
+        padding-top: 100px;
         &_title {
             color: $color-white;
             font-size: 64px;
@@ -107,6 +109,7 @@
             text-align: center;
             line-height: 70px;
             text-shadow: 3px 2px 3px $color-white-opacity;
+            width: 1000px;
         }
         &_subtitle {
             color: $color-white-opacity;
@@ -115,6 +118,7 @@
             text-align: center;
             margin-top: 80px;
             line-height: 40px;
+            width: 1000px;
         }
     }
     &_up {
@@ -178,7 +182,6 @@
         width: 100%;
         height: 100%;
         border-radius: 15px;
-        border: 3px solid $color-black-opacity;
         background-color: $color-white;
         &_main {
             display: block;
@@ -241,7 +244,7 @@
             padding: 15px;
             &-text {
                 color: $color-black;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 400;
                 text-align: left;
             }
@@ -285,6 +288,32 @@
     }
 }
 
+.active {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 2s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 .portfolio {
     background-color: $color-black;
     padding: 100px 0 0;
@@ -297,10 +326,14 @@
         padding-top: 20px;
     }
     &_item {
+        transition: 0.5s all;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        &:hover {
+            transform: scale(1.04);
         }
     }
 }
@@ -344,6 +377,7 @@
         grid-auto-rows: minmax(21px, auto);
         margin-top: 10px;
         padding-left: 30px;
+
         &::before {
             content: '';
             width: 20px;
@@ -353,6 +387,11 @@
             position: absolute;
             top: 6px;
             left: 0;
+
+        }
+        &:hover::before {
+            background-color: $color-white;
+            transition: 0.6s all;
         }
     }
 }
