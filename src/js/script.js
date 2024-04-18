@@ -100,5 +100,3 @@ for (i = 0; i < detailBtn.length; i++) {
         main_win.style.display = 'block';
     })
 }
-
-
