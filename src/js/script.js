@@ -17,7 +17,7 @@ VANTA.NET({
 
 
 /* Гамбургер */
-const hamburger = document.querySelector('.promo_hamburger'),
+const hamburger = document.querySelector('.promo_hamburger_block'),
     menu = document.querySelector('.menu'),
     closeElem = document.querySelector('.menu_close'),
     menuList = document.querySelector('.menu_list'),
@@ -42,20 +42,21 @@ for (let i = 0; i < items.length; i++){
 
 //Меню становится черным при скролле
 const arrowUp = document.querySelector('.promo_up');
+const promoHamburger = document.querySelector('.promo_hamburger');
 window.addEventListener('scroll', (e) => {
     let activeted = false;
     if ( activeted === false) {
         if (window.pageYOffset >= 1) {
             menu.style.backgroundColor = 'black';
             menu.style.transition = '0.9s';
-            hamburger.style.backgroundColor = 'black';
-            hamburger.style.transition = '0.9s';
+            promoHamburger.style.backgroundColor = 'black';
+            promoHamburger.style.transition = '0.9s';
             activeted = true;
         } else {
             menu.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
             menu.style.transition = '0.9s';
-            hamburger.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-            hamburger.style.transition = '0.9s';
+            promoHamburger.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            promoHamburger.style.transition = '0.9s';
             activeted = false;
         }
     } 
