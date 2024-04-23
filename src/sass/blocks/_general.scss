@@ -418,10 +418,10 @@
 .stages {
     padding: 100px 0 0;
     background-color: $color-black;
-    min-height: 910px;
+    // min-height: 910px;
     &_wrapper {
         display: grid;
-        grid-template: repeat(2, 350px) / repeat(2, 500px);
+        grid-template: repeat(2, 380px) / repeat(2, 500px);
         gap: 20px;
         justify-content: center;
         margin-top: 30px;
@@ -476,7 +476,7 @@
 
 .contacts {
     background-color: $color-black;
-    padding: 100px 0 60px;
+    padding: 100px 0 0;
     &_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -489,14 +489,18 @@
         font-weight: 400;
     }
     &_social {
+        display: flex;
+        justify-content: start;
         margin-top: 30px;
     }
     &_link {
         text-decoration: none;
         margin-right: 35px;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
         img {
             height: 60px;
-            cursor: pointer;
         }
     }
     &_form {
@@ -585,6 +589,62 @@
             }
         }
     }
+}
+
+.questions {
+    padding: 100px 0 60px;
+    background-color: $color-black;
+    &_wrapper {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 900px;
+        &_item {
+            position: relative;
+            margin-top: 25px;
+            &-arrow {
+                border-bottom: 3px solid $color-white;
+                border-right: 3px solid $color-white;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 0;
+                right: 10px;
+                transform: rotate(45.00deg);
+            }
+            &-title {
+                color: $color-white;
+                font-size: 25px;
+                font-weight: 400;
+            }
+            &-descr {
+                display: none;
+                color: $color-white-opacity;
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 10px;
+                width: 700px;
+                a {
+                    color: $color-purple;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(225deg);
 }
 
 
