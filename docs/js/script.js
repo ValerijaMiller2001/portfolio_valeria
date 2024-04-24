@@ -98,45 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //FAQ 
-//     const questionsItem = document.querySelectorAll('.questions_wrapper_item');
-//     const questionsDescr = document.querySelectorAll('.questions_wrapper_item-descr');
-//     const questionsWrapper = document.querySelector('.questions_wrapper');
-
-//     function showDescrQuestions(i = 0) {
-//         questionsDescr[i].classList.add('show');
-//         questionsDescr[i].classList.remove('hide');
-//     }
-
-//     function hideDescrQuestions() {
-//         questionsDescr.forEach(item => {
-//             item.classList.add('hide');
-//             item.classList.remove('show');
-
-//         })
-//     }
-//     showDescrQuestions();
-//     hideDescrQuestions();
-
-//     questionsWrapper.addEventListener('click', (event) => {
-//         const target = event.target;
-//         if (target && target.classList.contains('questions_wrapper_item')) {
-//             questionsItem.forEach((item, i) => {
-//                 if (target == item) {
-//                     hideDescrQuestions();
-//                     showDescrQuestions(i);
-//                 }
-//             })
-//         }
-//     })
-
-
 
     const accordionItems = document.querySelectorAll('.questions_wrapper_item');
 
     accordionItems.forEach(function(item) {
         item.addEventListener('click', function() {
             const accordionContent = this.querySelector('.questions_wrapper_item-descr');
-            const accordionArrow = this.querySelector('.questions_wrapper_item-arrow');
+            const accordionArrow = this.querySelector('.questions_wrapper_item_header-arrow');
 
             if (accordionContent.classList.contains('show')) {
                 accordionContent.classList.remove('show');
@@ -154,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeAllAccordionItems() {
         const accordionContents = document.querySelectorAll('.questions_wrapper_item-descr');
-        const accordionArrows = document.querySelectorAll('.questions_wrapper_item-arrow');
+        const accordionArrows = document.querySelectorAll('.questions_wrapper_item_header-arrow');
 
         accordionContents.forEach(function(content) {
             content.classList.remove('show');
@@ -165,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
             arrow.classList.remove('rotate');
         });
     }
-
 
 
 

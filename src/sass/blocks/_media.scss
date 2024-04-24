@@ -131,6 +131,17 @@
             font-size: 19px;
         }
     }
+
+    .questions {
+        &_wrapper {
+            width: 100%;
+            &_item {
+                &-descr {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
     
 @media (max-width: 768px) {
@@ -268,7 +279,7 @@
     }
 
     .contacts {
-        padding: 50px 0 60px;
+        padding: 50px 0 0;
         &_wrapper {
             display: block;
         }
@@ -289,6 +300,11 @@
         &_triggers {
             grid-template-columns: repeat(2, 260px);
         }
+    }
+
+    .questions {
+        padding: 50px 0 50px;
+
     }
 }
     
@@ -373,6 +389,35 @@
             span {
                 text-align: center;
             }
+        }
+    }
+
+    .questions {
+        &_wrapper {
+            &_item {
+                &_header {
+                    &-title {
+                        font-size: 20px;
+                    }
+                }
+                &-descr {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &_wrapper {
+            display: block;
+        }
+        &_menu {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &_social {
+            justify-content: center;
+            margin-top: 20px;
         }
     }
 }
