@@ -24,7 +24,7 @@
     }
 
     .portfolio {
-        &_wrapper {
+        &_block {
             grid-template: repeat(2, 235px) / repeat(4, 235px);
             grid-auto-rows: 235px;
         }
@@ -81,7 +81,7 @@
     }
 
     .portfolio {
-        &_wrapper {
+        &_block {
             grid-template: repeat(2, 235px) / repeat(3, 235px);
         }
     }
@@ -266,8 +266,33 @@
     .portfolio {
         padding: 50px 0 0;
         &_wrapper {
-            grid-template: repeat(2, 265px) / repeat(2, 265px);
-            grid-auto-rows: 265px;
+            position: relative;
+        }
+        &_prew {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+        &_next {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        &_link {
+            display: block;
+            margin: 0 auto;
+            width: calc(100% - 100px);
+            height: calc(100% - 40px);
+            img {
+                // display: block;
+                // margin: 0 auto;
+                // width: calc(100% - 100px);
+                // height: calc(100% - 40px);
+            }
         }
     }
 
@@ -305,6 +330,20 @@
     .questions {
         padding: 50px 0 50px;
 
+    }
+
+    .footer {
+        &_wrapper {
+            display: block;
+        }
+        &_menu {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &_social {
+            justify-content: center;
+            margin-top: 20px;
+        }
     }
 }
     
@@ -354,12 +393,6 @@
         }
     }
 
-    .portfolio {
-        &_wrapper {
-            grid-template: repeat(2, 300px) / minmax(280px, 300px);
-            grid-auto-rows: 300px;
-        }
-    }
 
     .contacts {
         &_form {
@@ -407,17 +440,5 @@
         }
     }
 
-    .footer {
-        &_wrapper {
-            display: block;
-        }
-        &_menu {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        &_social {
-            justify-content: center;
-            margin-top: 20px;
-        }
-    }
+
 }
