@@ -13,7 +13,6 @@
 
     .promo {
         &_main {
-
             &_title {
                 width: 960px;
             }
@@ -27,6 +26,12 @@
         &_block {
             grid-template: repeat(2, 235px) / repeat(4, 235px);
             grid-auto-rows: 235px;
+        }
+    }
+
+    .stages {
+        &_wrapper {
+            grid-template: repeat(2, minmax(250px, auto)) / repeat(2, 400px);
         }
     }
 }
@@ -103,6 +108,14 @@
                 top: 3px;
             }
         }
+    }
+
+    .stages {
+        &_wrapper{
+            grid-template: repeat(2, minmax(250px, auto)) / repeat(2, 340px);
+            gap: 35px;
+        }
+
     }
 
     .contacts {
@@ -267,6 +280,11 @@
         padding: 50px 0 0;
         &_wrapper {
             position: relative;
+            overflow: hidden;
+        }
+        &_block {
+            display: flex;
+            transition: 0.5s all;
         }
         &_prew {
             display: block;
@@ -274,6 +292,7 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
+            z-index: 15;
         }
         &_next {
             display: block;
@@ -281,18 +300,25 @@
             top: 50%;
             transform: translateY(-50%);
             right: 0;
+            z-index: 15;
+
         }
         &_link {
             display: block;
             margin: 0 auto;
             width: calc(100% - 100px);
             height: calc(100% - 40px);
-            img {
-                // display: block;
-                // margin: 0 auto;
-                // width: calc(100% - 100px);
-                // height: calc(100% - 40px);
-            }
+        }
+        &_indicators {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
         }
     }
 
@@ -300,6 +326,19 @@
         padding: 50px 0 0;
         &_wrapper {
             display: block;
+        }
+    }
+
+    .stages {
+        &_wrapper {
+            display: block;
+        }
+        &_item {
+            margin-top: 30px;
+            &-num {
+                top: -60px;
+                left: 15px;
+            }
         }
     }
 

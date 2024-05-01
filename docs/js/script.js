@@ -153,16 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.screen.width > 768) {
         portfolioBlock.style.display = 'grid';
     } else {
-        portfolioBlock.style.width = 100 * portfolioItem.length + '%';
         portfolioBlock.style.display = 'flex';
-        portfolioBlock.style.transition = '0.5s all';
-
-        portfolioWrapper.style.overflow = 'hidden';
+        portfolioBlock.style.width = 100 * portfolioItem.length + '%';
         portfolioItem.forEach(slide => {
             slide.style.width = portfolioWidth;
         });
 
-        portfolioSlider.style.position = 'relative';
         const indicators = document.createElement('ol');
         const dots = [];
         indicators.classList.add('portfolio_indicators');
@@ -177,17 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             indicators.append(dot);
             dots.push(dot);
-        }
-
-        function handleSwipe() {
-            const swipeLength = touchEndX - touchStartX;
-            if (Math.abs(swipeLength) > 50) {
-                if (swipeLength < 0) {
-                    nextSlide();
-                } else {
-                    prewSlide();
-                }
-            }
         }
 
         function showOpacityDots() {
@@ -215,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function prewSlide() {
             if (offset == 0) {
-                offset = +portfolioWidth.slice(0, portfolioWidth.length - 2) * (portfolioItem.length - 1)
+                offset = +portfolioWidth.slice(0, portfolioWidth.length - 2) * (portfolioItem.length - 1);
             } else {
                 offset -= +portfolioWidth.slice(0, portfolioWidth.length - 2);
             }
@@ -229,6 +214,17 @@ document.addEventListener('DOMContentLoaded', () => {
             showOpacityDots();
         }
 
+        function handleSwipe() {
+            const swipeLength = touchEndX - touchStartX;
+            if (Math.abs(swipeLength) > 50) {
+                if (swipeLength < 0) {
+                    nextSlide();
+                } else {
+                    prewSlide();
+                }
+            }
+        }
+
         portfolioWrapper.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].clientX;
         });
@@ -238,6 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioWrapper.addEventListener('touchend', () => {
             handleSwipe();
         });
+
+        
 
         portfolioNext.addEventListener('click', () => {
             nextSlide();
@@ -260,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
+   
 });
 
 

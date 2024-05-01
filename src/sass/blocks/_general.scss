@@ -1,6 +1,6 @@
 .menu {
     position: fixed;
-    z-index: 2;
+    z-index: 20;
     width: 100%;
     background-color: $color-black-opacity;
     &_block {
@@ -88,7 +88,7 @@
     &_hamburger {
         position: relative;
         display: none;
-        z-index: 5;
+        z-index: 20;
         &_block {
             display: none;
         }
@@ -337,6 +337,9 @@
 .portfolio {
     background-color: $color-black;
     padding: 100px 0 0;
+    &_slider {
+        position: relative;
+    }
     &_block {
         display: grid;
         grid-template: repeat(2, 280px) / repeat(4, 280px);
@@ -352,37 +355,37 @@
     &_prew, &_next {
         display: none;
     }
-    &_link {
+    &_item {
         transition: 0.5s all;
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+    &_link {
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        &:hover {
-            transform: scale(1.04);
-        }
     }
     &_indicators {
         position: absolute;
-        right: 0;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 15;
         display: flex;
         justify-content: center;
-        margin-right: 15%;
-        margin-left: 15%;
         list-style-type: none;
         padding: 0;
+        margin: 0;
     }
     &_dot {
         box-sizing: content-box;
         flex: 0 1 auto;
         width: 30px;
         height: 6px;
-        margin-right: 3px;
-        margin-left: 3px;
+        margin: 0 3px;
         cursor: pointer;
         background-color: $color-white;
         background-clip: padding-box;
@@ -455,57 +458,66 @@
 .stages {
     padding: 100px 0 0;
     background-color: $color-black;
-    // min-height: 910px;
-    &_wrapper {
+      &_wrapper {
         display: grid;
-        grid-template: repeat(2, 380px) / repeat(2, 500px);
-        gap: 20px;
+        grid-template: repeat(2, minmax(250px, auto)) / repeat(2, 500px);
+        grid-auto-rows: minmax(250px, auto);
+        gap: 70px;
         justify-content: center;
         margin-top: 30px;
-        &_item {
-            width: 100%;
-            height: 100%;
-            &-num {
-                font-size: 60px;
-                color: $color-purple;
-                font-weight: 600;
-                opacity: 0.6;
-            }
-            &-title {
-                color: $color-white;
-                font-size: 20px;
-                font-weight: 400;
-            }
-            &-descr {
+    }
+    &_item {
+        position: relative;
+        padding-left: 20px;
+        &-num {
+            position: absolute;
+            top: -75px;
+            left: -13px;
+            color: $color-purple;
+            opacity: 0.5;
+            font-size: 150px;
+            font-weight: 400;
+            z-index: 1;
+        }
+        &-title {
+            position: relative;
+            color: $color-white;
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+            z-index: 5;
+        }
+        &-descr {
+            position: relative;
+            color: $color-white;
+            margin: 15px 0 0;
+            padding: 0;
+            font-size: 15px;
+            font-weight: 500;
+            list-style-type: none;
+            z-index: 5;
+            li {
                 position: relative;
-                color: $color-white;
-                margin: 15px 0 0;
-                font-size: 15px;
-                font-weight: 500;
-                list-style-type: none;
-                li {
-                    position: relative;
-                    margin-top: 10px;
-                    &::after {
-                        content: '';
-                        width: 10px;
-                        height: 10px;
-                        background-color: $color-purple;
-                        position: absolute;
-                        top: 5px;
-                        left: -20px;
-                        border-radius: 100%;
-                        transition: all 0.5s;
-                    }
-                    &:hover::after {
-                        background-color: $color-white;
-                        box-shadow: 1px 1px 14px $color-white;
-                        width: 15px;
-                        height: 15px;
-                        top: 5px;
-                        left: -30px;
-                    }
-                }
+                margin-top: 10px;
+                // &::after {
+                //     content: '';
+                //     width: 10px;
+                //     height: 10px;
+                //     background-color: $color-purple;
+                //     position: absolute;
+                //     top: 5px;
+                //     left: -20px;
+                //     border-radius: 100%;
+                //     transition: all 0.5s;
+                // }
+                // &:hover::after {
+                //     background-color: $color-white;
+                //     box-shadow: 1px 1px 14px $color-white;
+                //     width: 15px;
+                //     height: 15px;
+                //     top: 5px;
+                //     left: -30px;
+                // }
             }
         }
     }
