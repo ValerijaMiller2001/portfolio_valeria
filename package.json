@@ -26,6 +26,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "webpack-cli": "^5.1.4"
   }
 }
