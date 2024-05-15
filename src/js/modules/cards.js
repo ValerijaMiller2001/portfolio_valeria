@@ -1,10 +1,10 @@
-function cards() {
+function cards(btnMainSelector, btnDetailSelector, cardMainSelector, cardDetailSelector) {
     // Переключение услуг
 
-    const mainBtn = document.querySelectorAll('.services_item_main-btn');
-    const detailBtn = document.querySelectorAll('.services_item_detail-btn');
-    const servicesMain = document.querySelectorAll('.services_item_main');
-    const servicesDetail = document.querySelectorAll('.services_item_detail');
+    const mainBtn = document.querySelectorAll(btnMainSelector);
+    const detailBtn = document.querySelectorAll(btnDetailSelector);
+    const servicesMain = document.querySelectorAll(cardMainSelector);
+    const servicesDetail = document.querySelectorAll(cardDetailSelector);
 
     mainBtn.forEach((btn, index) => {
         btn.addEventListener('click', () => {

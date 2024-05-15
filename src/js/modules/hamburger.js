@@ -1,10 +1,9 @@
-function hamburger() {
+function hamburger(hamburgerBlockSelector, menuSelector, closeSelector, menuLinkSelector) {
     /* Гамбургер */
-    const hamburger = document.querySelector('.promo_hamburger_block'),
-    menu = document.querySelector('.menu'),
-    closeElem = document.querySelector('.menu_close'),
-    menuList = document.querySelector('.menu_list'),
-    items = menuList.querySelectorAll('.menu_link');
+    const hamburger = document.querySelector(hamburgerBlockSelector);
+    const menu = document.querySelector(menuSelector);
+    const closeElem = document.querySelector(closeSelector);
+    const items = document.querySelectorAll(menuLinkSelector);
 
     hamburger.addEventListener('click', () => {
         document.body.classList.toggle('_lock');

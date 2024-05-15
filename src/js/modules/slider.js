@@ -1,12 +1,12 @@
-function slider() {
+function slider({sliderSelector, wrapperSelector, itemSelector, blockSelector, prewSelector, nextSelector}) {
     //Portfolio
 
-    const portfolioSlider = document.querySelector('.portfolio_slider');
-    const portfolioWrapper = document.querySelector('.portfolio_wrapper');
-    const portfolioItem = document.querySelectorAll('.portfolio_item');
-    const portfolioBlock = document.querySelector('.portfolio_block');
-    const portfolioPrew = document.querySelector('.portfolio_prew');
-    const portfolioNext = document.querySelector('.portfolio_next');
+    const portfolioSlider = document.querySelector(sliderSelector);
+    const portfolioWrapper = document.querySelector(wrapperSelector);
+    const portfolioItem = document.querySelectorAll(itemSelector);
+    const portfolioBlock = document.querySelector(blockSelector);
+    const portfolioPrew = document.querySelector(prewSelector);
+    const portfolioNext = document.querySelector(nextSelector);
     const portfolioWidth = window.getComputedStyle(portfolioWrapper).width;
     let slideIndex = 1;
     let offset = 0;

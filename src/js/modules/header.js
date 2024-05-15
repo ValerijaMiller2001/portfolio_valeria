@@ -1,9 +1,9 @@
-function header() {
+function header(hamburgerSelector, menuSelector) {
     //Меню становится черным при скролле
-    const arrowUp = document.querySelector('.promo_up');
-    const promoHamburger = document.querySelector('.promo_hamburger');
-    const menu = document.querySelector('.menu');
-    window.addEventListener('scroll', (e) => {
+    const promoHamburger = document.querySelector(hamburgerSelector);
+    const menu = document.querySelector(menuSelector);
+    
+    window.addEventListener('scroll', () => {
         let activeted = false;
         if ( activeted === false) {
             if (window.pageYOffset >= 1) {
@@ -20,13 +20,6 @@ function header() {
                 activeted = false;
             }
         } 
-        //Стрелка вверх
-        if (window.pageYOffset >= 800) {
-            arrowUp.style.display = 'block';
-            arrowUp.style.transition = '0.9s';
-        } else {
-            arrowUp.style.display = 'none';
-        }
     });
 }
 export default header;

@@ -1,12 +1,12 @@
-function accordion() {
+function accordion(itemSelector, descrSelector, arrowSelector) {
     //FAQ 
 
-    const accordionItems = document.querySelectorAll('.questions_wrapper_item');
+    const accordionItems = document.querySelectorAll(itemSelector);
 
     accordionItems.forEach(function(item) {
         item.addEventListener('click', function() {
-            const accordionContent = this.querySelector('.questions_wrapper_item-descr');
-            const accordionArrow = this.querySelector('.questions_wrapper_item_header-arrow');
+            const accordionContent = this.querySelector(descrSelector);
+            const accordionArrow = this.querySelector(arrowSelector);
 
             if (accordionContent.classList.contains('show')) {
                 accordionContent.classList.remove('show');
@@ -23,8 +23,8 @@ function accordion() {
     });
 
     function closeAllAccordionItems() {
-        const accordionContents = document.querySelectorAll('.questions_wrapper_item-descr');
-        const accordionArrows = document.querySelectorAll('.questions_wrapper_item_header-arrow');
+        const accordionContents = document.querySelectorAll(descrSelector);
+        const accordionArrows = document.querySelectorAll(arrowSelector);
 
         accordionContents.forEach(function(content) {
             content.classList.remove('show');
