@@ -526,6 +526,22 @@
     }
 }
 
+.technologies {
+    background-color: $color-black;
+    padding: 100px 0 0;
+    &_wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    &_img {
+        height: 100px;
+        // min-width: 300px;
+    }
+}
+
 .contacts {
     background-color: $color-black;
     padding: 100px 0 0;
